@@ -19,6 +19,7 @@ public class MyCompositePattern {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int numbersMax= 30;
         String category=null;
         ArrayList<String> al= new ArrayList<String>();
         al.add("Quite programe");
@@ -30,15 +31,15 @@ public class MyCompositePattern {
         Scanner sc = new Scanner(System.in);
         
         Tree prime= new Tree();
-        category="Prime Number";
+        category="Prime Numbers smaller than "+ Integer.toString(numbersMax);
         prime.addNode(category);
         
         Tree odd= new Tree();
-        category="Odd Number";
+        category="Odd Numbers smaller than "+ Integer.toString(numbersMax);
         odd.addNode(category);
         
         Tree even= new Tree();
-        category="Even Number";
+        category="Even Numbers smaller than "+ Integer.toString(numbersMax);
         even.addNode(category);
 
         for (int opt= 1; opt < 30; opt++)
