@@ -6,6 +6,7 @@
 package mycompositepattern;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -52,19 +53,20 @@ public class MyCompositePattern {
             else{ odd.addNode(Integer.toString(opt));}
   
         }
-        for (String p: prime.getSubSets()){
-                System.out.println("\t" +p);
-            }  
-        System.out.println("-----");
-        for (String e: even.getSubSets()){
-            System.out.println("\t" +e);
-        }
-        System.out.println("-----");
-        for (String o: odd.getSubSets()){
-            System.out.println("\t" +o);
-        }
+
+        printOut(prime);
+        printOut(odd);
+        printOut(even);
     }
-    
+
+    private static void printOut(Tree list){
+        for (String p: list.getSubSets()){
+                System.out.println("\t" +p);
+        }  
+        System.out.println("-----------------------");
+    }
+
+ 
     private static boolean isPrime(int num){
         for (int i=num-1; i>1; i--){
             if ( num%i ==0 ){ 
